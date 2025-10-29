@@ -3,7 +3,13 @@
   pkgs,
   config,
   ...
-}: {
+}: let
+  myPkgs = import pkgs.path {
+    overlays = [
+      (import ./overlays/cursorHornet/cursorHornet.nix)
+    ];
+  };
+in {
   options.theme = lib.mkOption {
     type = lib.types.attrs;
     default = {
@@ -28,6 +34,10 @@
       };
     };
     description = "Theme configuration options";
+  };
+
+  config = {
+    home.packages = [myPkgs.cursorHornet];
   };
 
   config.stylix = {
@@ -55,9 +65,14 @@
     };
 
     cursor = {
-      name = "Cursor-Hornet";
-      package = pkgs.callPackage ./cursor/cursorHornet/hornet-cursor.nix {};
-      size = 20;
+      name = "cursorHornet";
+      package = myPkgs.cursorHornet;
+      size = 32;
+    };
+
+    environment.variables = {
+      XCURSOR_THEME = "cursorHornet";
+      XCURSOR_SIZE = "32";
     };
 
     fonts = {
