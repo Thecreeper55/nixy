@@ -15,7 +15,7 @@
       blur = true;
       border-size = 3;
       animation-speed = "medium"; # "fast" | "medium" | "slow"
-      fetch = "pfetch"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
+      fetch = "none"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
       textColorOnWallpaper =
         config.lib.stylix.colors.base01; # Color of the text displayed on the wallpaper (Lockscreen, display manager, ...)
 
@@ -55,8 +55,8 @@
     };
 
     cursor = {
-      name = "rose-pine-hyprcursor";
-      package = pkgs.rose-pine-hyprcursor;
+      name = "phinger-cursors-light";
+      package = pkgs.phinger-cursors;
       size = 20;
     };
 
