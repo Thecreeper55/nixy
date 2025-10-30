@@ -14,8 +14,8 @@
       inactive-opacity = 0.94;
       blur = true;
       border-size = 3;
-      animation-speed = "medium"; # "fast" | "medium" | "slow"
-      fetch = "none"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
+      animation-speed = "fast"; # "fast" | "medium" | "slow"
+      fetch = "pfetch"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
       textColorOnWallpaper =
         config.lib.stylix.colors.base01; # Color of the text displayed on the wallpaper (Lockscreen, display manager, ...)
 
@@ -55,8 +55,8 @@
     };
 
     cursor = {
-      name = "phinger-cursors-light";
-      package = pkgs.phinger-cursors;
+      name = "rose-pine-hyprcursor";
+      package = pkgs.rose-pine-hyprcursor;
       size = 20;
     };
 
@@ -84,8 +84,8 @@
 
     polarity = "dark";
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/pastel-window.png";
-      sha256 = "sha256-0bb2mgkql0rb7x90sa8r277z3mb5zl8bzh1zijgvpiblah2mx35g";
+      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/japan-houses.png";
+      sha256 = "sha256-BeTFz+WeulDt5ixg5ni09J439PxMnofWnJz5PGEUgf8=";
     };
   };
 }
