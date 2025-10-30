@@ -5,7 +5,7 @@
 }: {
   imports = [
     # Choose your theme here:
-    ../../themes/shaver/shaver.nix
+    ../../themes/shaver.nix
   ];
 
   config.var = {
