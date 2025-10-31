@@ -84,7 +84,7 @@
 
     polarity = "dark";
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/japan-houses.png";
+      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/main/app/static/wallpapers/space-portal-galaxy.png";
       sha256 = "sha256-BeTFz+WeulDt5ixg5ni09J439PxMnofWnJz5PGEUgf8=";
     };
   };
