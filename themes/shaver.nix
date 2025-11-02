@@ -62,8 +62,8 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrains Mono Nerd Font";
+        package = pkgs.monocraft;
+        name = "monocraft";
       };
       sansSerif = {
         package = pkgs.source-sans-pro;
@@ -85,7 +85,7 @@
     polarity = "dark";
     image = pkgs.fetchurl {
       url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/main/app/static/wallpapers/space-portal-galaxy.png";
-      sha256 = "sha256-BeTFz+WeulDt5ixg5ni09J439PxMnofWnJz5PGEUgf8=";
+      sha256 = "sha256-zgpHDkifGB5x632Yq7c3l/gzyNNOsgX3PXQkq8DfDiw=";
     };
   };
 }
