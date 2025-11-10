@@ -10,7 +10,8 @@
 
     # Programs
     ../../home/programs/kitty
-    ../../home/programs/alacritty
+    # ../../home/programs/alacritty
+    ../../home/programs/ghostty
     ../../home/programs/nvf
     ../../home/programs/shell
     ../../home/programs/fetch
@@ -79,6 +80,8 @@
       air
       duckdb
       inputs.eleakxir.packages.${pkgs.system}.leak-utils
+      caido
+      wireshark
 
       # Utils
       zip
