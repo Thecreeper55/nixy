@@ -82,6 +82,7 @@
       mysql80
       sqlite
       jetbrains.idea-community-bin
+      ghidra
 
       # Utils
       zip
