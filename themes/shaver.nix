@@ -49,7 +49,7 @@
       base0A = "f9e2af"; # Classes, Markup Bold, Search Text Background
       base0B = "a6e3a1"; # Strings, Inherited Class, Markup Code, Diff Inserted
       base0C = "94e2d5"; # Support, Regular Expressions, Escape Characters, Markup Quotes
-      base0D = "89b4fa"; # Functions, Methods, Attribute IDs, Headings, Accent color
+      base0D = "42b15d"; # Functions, Methods, Attribute IDs, Headings, Accent color
       base0E = "cba6f7"; # Keywords, Storage, Selector, Markup Italic, Diff Changed
       base0F = "f2cdcd"; # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
     };
@@ -84,8 +84,8 @@
 
     polarity = "dark";
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/main/app/static/wallpapers/space-portal-galaxy.png";
-      sha256 = "sha256-zgpHDkifGB5x632Yq7c3l/gzyNNOsgX3PXQkq8DfDiw=";
+      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/pastel-window.png";
+      sha256 = "sha256-r4xeBVR0xbufjD/AvxD9ZdXxzxEZKQ1SPysDiuerYi0=";
     };
   };
 }
