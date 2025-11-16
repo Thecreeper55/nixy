@@ -1,6 +1,10 @@
 # Hyprpanel is the bar on top of the screen
 # Display information like workspaces, battery, wifi, ...
-{config, ...}: let
+{
+  config,
+  pkgs,
+  ...
+}: let
   transparentButtons = config.theme.bar.transparentButtons;
 
   accent = "#${config.lib.stylix.colors.base0D}";
@@ -28,6 +32,15 @@
 
   homeDir = "/home/${config.var.username}";
 in {
+  home.file.".config/hyprpanel/modules.json" = {
+    source = ./modules.json;
+    force = true;
+  };
+  home.file.".config/hyprpanel/modules.scss" = {
+    source = ./modules.scss;
+    force = true;
+  };
+
   wayland.windowManager.hyprland.settings.exec-once = ["hyprpanel"];
 
   programs.hyprpanel = {
@@ -37,7 +50,7 @@ in {
       bar.layouts = {
         "*" = {
           left = ["dashboard" "workspaces" "windowtitle"];
-          middle = ["media" "cava"];
+          middle = ["custom/iplocal" "media" "cava"];
           right = [
             "systray"
             "volume"
@@ -141,6 +154,7 @@ in {
 
       menus.clock.weather.location = location;
       menus.clock.weather.unit = "metric";
+      menus.clock.weather.weather_api_key = builtins.replaceStrings ["\n"] [""] (builtins.readFile ../../../weather.key);
       menus.dashboard.powermenu.confirmation = false;
       menus.dashboard.powermenu.avatar.image = "~/.face.icon";
 

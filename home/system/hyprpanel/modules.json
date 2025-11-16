@@ -1,0 +1,9 @@
+{
+  "custom/iplocal": {
+    "icon": "🖧",
+    "label": "{}",
+    "execute":"hostname -I",
+    "tooltip":"Ip del equipo",
+    "interval": 15000
+  }
+}
