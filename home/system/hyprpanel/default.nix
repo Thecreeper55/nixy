@@ -150,7 +150,7 @@ in {
 
       menus.clock.weather.location = location;
       menus.clock.weather.unit = "metric";
-      menus.clock.weather.weather_api_key = "homeDir/Documents/weather_api_key.json";
+      menus.clock.weather.key = "0ba79bfc28714fdc935111354251611";
       menus.dashboard.powermenu.confirmation = false;
       menus.dashboard.powermenu.avatar.image = "~/.face.icon";
 
