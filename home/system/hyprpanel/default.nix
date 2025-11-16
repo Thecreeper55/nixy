@@ -1,10 +1,6 @@
 # Hyprpanel is the bar on top of the screen
 # Display information like workspaces, battery, wifi, ...
-{
-  config,
-  pkgs,
-  ...
-}: let
+{config, ...}: let
   transparentButtons = config.theme.bar.transparentButtons;
 
   accent = "#${config.lib.stylix.colors.base0D}";
@@ -154,7 +150,7 @@ in {
 
       menus.clock.weather.location = location;
       menus.clock.weather.unit = "metric";
-      menus.clock.weather.weather_api_key = builtins.replaceStrings ["\n"] [""] (builtins.readFile ../../../weather.key);
+      menus.clock.weather.weather_api_key = "homeDir/Documents/weather_api_key.json";
       menus.dashboard.powermenu.confirmation = false;
       menus.dashboard.powermenu.avatar.image = "~/.face.icon";
 

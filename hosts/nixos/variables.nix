@@ -18,7 +18,7 @@
 
     keyboardLayout = "es";
 
-    location = "Madrid";
+    location = "Valladolid";
     timeZone = "Europe/Madrid";
     defaultLocale = "es_ES.UTF-8";
     extraLocale = "es_ES.UTF-8";

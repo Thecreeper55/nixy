@@ -4,6 +4,7 @@
     "label": "{}",
     "execute":"hostname -I",
     "tooltip":"Ip del equipo",
-    "interval": 15000
+    "interval": 15000,
+    "hideOnEmpty": true
   }
 }
