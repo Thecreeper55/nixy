@@ -83,9 +83,6 @@
     };
 
     polarity = "dark";
-    image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/pastel-window.png";
-      sha256 = "sha256-r4xeBVR0xbufjD/AvxD9ZdXxzxEZKQ1SPysDiuerYi0=";
-    };
+    image = ./background.png;
   };
 }

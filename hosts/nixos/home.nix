@@ -83,6 +83,8 @@
       sqlite
       jetbrains.idea-community-bin
       ghidra
+      docker
+      wireshark
 
       # Utils
       zip
@@ -92,6 +94,10 @@
       pfetch
       btop
       fastfetch
+
+      # Gaming
+      protonup-qt
+      steam
 
       # Just cool
       peaclock
