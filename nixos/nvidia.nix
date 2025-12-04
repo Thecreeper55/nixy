@@ -9,7 +9,7 @@
   nvidiaDriverChannel = config.boot.kernelPackages.nvidiaPackages.beta;
 in {
   # Video drivers configuration for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"]; # Simplified - other modules are loaded automatically
+  services.xserver.videoDrivers = ["amdgpu" "nvidia"]; # Simplified - other modules are loaded automatically ### amdgpu or nvidia
 
   # Kernel parameters for better Wayland and Hyprland integration
   boot.kernelParams = [
