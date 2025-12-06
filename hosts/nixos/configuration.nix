@@ -13,7 +13,7 @@
     ../../nixos/utils.nix
     ../../nixos/tailscale.nix
     ../../nixos/hyprland.nix
-
+    ../../nixos/wireshark.nix
 
     # You should let those lines as is
     ./hardware-configuration.nix

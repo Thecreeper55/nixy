@@ -46,7 +46,7 @@
 
     packages = with pkgs; [
       # Apps
-      bitwarden # Password manager
+      bitwarden-desktop # Password manager
       vlc # Video player
       blanket # White-noise app
       obsidian # Note taking app
@@ -62,7 +62,6 @@
       # Privacy
       session-desktop # Session app, private messages
       protonvpn-gui
-      protonvpn-cli
       proton-pass
       # protonmail-desktop # Now using the online brave app
       proton-authenticator
