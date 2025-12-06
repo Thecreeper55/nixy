@@ -3,7 +3,7 @@
     "icon": "🖧",
     "label": "{}",
     "execute":"hostname -I",
-    "tooltip":"Ip del equipo",
+    "tooltip":"Local IP",
     "interval": 15000,
     "hideOnEmpty": true
   }
