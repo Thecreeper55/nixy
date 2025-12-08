@@ -90,6 +90,8 @@ in {
           then "nerdfetch"
           else if fetch == "pfetch"
           then "echo; ${pkgs.pfetch}/bin/pfetch"
+          else if fetch == "fastfetch"
+          then "echo; ${pkgs.fastfetch}/bin/fastfetch"
           else ""
         }
 

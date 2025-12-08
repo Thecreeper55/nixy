@@ -93,11 +93,9 @@
       jpegoptim
       pfetch
       btop
-      fastfetch
       direnv
 
       # Gaming
-      protonup-qt
       steam
 
       # Just cool

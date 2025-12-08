@@ -15,6 +15,7 @@
     ../../nixos/hyprland.nix
     ../../nixos/wireshark.nix
     ../../nixos/wireguard.nix
+    ../../nixos/protonupqt.nix
 
     # You should let those lines as is
     ./hardware-configuration.nix
