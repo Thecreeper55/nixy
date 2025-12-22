@@ -7,7 +7,7 @@
   options.theme = lib.mkOption {
     type = lib.types.attrs;
     default = {
-      rounding = 17;
+      rounding = 10;
       gaps-in = 8;
       gaps-out = 8 * 2;
       active-opacity = 0.97;
@@ -33,25 +33,25 @@
   config.stylix = {
     enable = true;
 
-    # Mocha
+    # tarot
     # See https://tinted-theming.github.io/tinted-gallery/ for more schemes
     base16Scheme = {
-      base00 = "0F0F15"; # Default Background
-      base01 = "15151A"; # Lighter Background (Used for status bars, line number and folding marks)
-      base02 = "313244"; # Selection Background
-      base03 = "45475a"; # Comments, Invisibles, Line Highlighting
-      base04 = "585b70"; # Dark Foreground (Used for status bars)
-      base05 = "cdd6f4"; # Default Foreground, Caret, Delimiters, Operators
-      base06 = "f5e0dc"; # Light Foreground (Not often used)
-      base07 = "b4befe"; # Light Background (Not often used)
-      base08 = "f38ba8"; # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-      base09 = "fab387"; # Integers, Boolean, Constants, XML Attributes, Markup Link Url
-      base0A = "f9e2af"; # Classes, Markup Bold, Search Text Background
-      base0B = "a6e3a1"; # Strings, Inherited Class, Markup Code, Diff Inserted
-      base0C = "94e2d5"; # Support, Regular Expressions, Escape Characters, Markup Quotes
-      base0D = "42b15d"; # Functions, Methods, Attribute IDs, Headings, Accent color
-      base0E = "cba6f7"; # Keywords, Storage, Selector, Markup Italic, Diff Changed
-      base0F = "f2cdcd"; # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+      base00 = "0e091d";
+      base01 = "2a153c";
+      base02 = "4b2054";
+      base03 = "74316b";
+      base04 = "8c406f";
+      base05 = "aa556f";
+      base06 = "c4686d";
+      base07 = "dc8f7c";
+      base08 = "c53253";
+      base09 = "ea4d60";
+      base0A = "ff6565";
+      base0B = "a68e5a";
+      base0C = "8c9785";
+      base0D = "6e6080";
+      base0E = "a45782";
+      base0F = "984d51";
     };
 
     cursor = {
@@ -83,6 +83,9 @@
     };
 
     polarity = "dark";
-    image = ./background.png;
+    image = pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/cat-watching-the-star_pixelart_purple_static.png";
+      sha256 = "sha256-P8gCiCC9CZPJyGL4kpvAaOqlNor010s/BUA0muBVfK0";
+    };
   };
 }

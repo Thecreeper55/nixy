@@ -20,7 +20,7 @@
     ../../home/programs/lazygit
     ../../home/programs/discord
     ../../home/programs/tailscale
-    ../../home/programs/direnv
+    #../../home/programs/direnv
 
     # Scripts
     ../../home/scripts # All scripts
@@ -93,10 +93,7 @@
       jpegoptim
       pfetch
       btop
-      direnv
-
-      # Gaming
-      steam
+      #direnv
 
       # Just cool
       peaclock

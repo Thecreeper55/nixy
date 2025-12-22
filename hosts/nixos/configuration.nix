@@ -16,6 +16,7 @@
     ../../nixos/wireshark.nix
     ../../nixos/wireguard.nix
     ../../nixos/protonupqt.nix
+    ../../nixos/steam.nix
 
     # You should let those lines as is
     ./hardware-configuration.nix
