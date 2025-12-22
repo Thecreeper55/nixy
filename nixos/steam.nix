@@ -5,4 +5,6 @@
       proton-ge-bin
     ];
   };
+
+  hardware.opengl.enable = true;
 }

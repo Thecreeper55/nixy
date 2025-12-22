@@ -1,10 +1,16 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [fastfetch];
+
+  home.file.".config/fastfetch/nixOwO.txt" = {
+    source = ./nixOWO.txt;
+    force = true;
+  };
+
   programs.fastfetch.enable = true;
   programs.fastfetch.settings = {
     logo = {
       type = "auto";
-      source = "NixOs";
+      source = ./nixOWO.txt;
       padding = {
         right = 1;
       };
