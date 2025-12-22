@@ -28,14 +28,9 @@
 
   homeDir = "/home/${config.var.username}";
 in {
-  home.file.".config/hyprpanel/modules.json" = {
-    source = ./modules.json;
-    force = true;
-  };
-  home.file.".config/hyprpanel/modules.scss" = {
-    source = ./modules.scss;
-    force = true;
-  };
+  imports = [
+    ./modules.nix
+  ];
 
   wayland.windowManager.hyprland.settings.exec-once = ["hyprpanel"];
 
