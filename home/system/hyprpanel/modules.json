@@ -1,0 +1,10 @@
+{
+  "custom/iplocal": {
+    "icon": "🖧",
+    "label": "{}",
+    "execute":"hostname -I",
+    "tooltip":"Local IP",
+    "interval": 15000,
+    "hideOnEmpty": true
+  }
+}
