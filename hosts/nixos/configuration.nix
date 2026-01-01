@@ -14,7 +14,6 @@
     ../../nixos/tailscale.nix
     ../../nixos/hyprland.nix
     ../../nixos/wireshark.nix
-    ../../nixos/wireguard.nix
     ../../nixos/protonupqt.nix
     ../../nixos/steam.nix
 

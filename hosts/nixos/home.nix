@@ -8,34 +8,29 @@
     ./variables.nix
 
     # Programs
-    ../../home/programs/kitty
-    ../../home/programs/alacritty
+    ../../home/programs/vivaldi
+    ../../home/programs/proton
+    ../../home/programs/ghostty
     ../../home/programs/nvf
     ../../home/programs/shell
     ../../home/programs/fetch
     ../../home/programs/git
-    ../../home/programs/git/signing.nix
+    ../../home/programs/git/lazygit.nix
+    ../../home/programs/git/signing.nix # Change the key or remove this file
     ../../home/programs/spicetify
     ../../home/programs/thunar
-    ../../home/programs/lazygit
     ../../home/programs/discord
-    ../../home/programs/tailscale
     ../../home/programs/direnv
-
-    # Scripts
-    ../../home/scripts # All scripts
+    ../../home/programs/zathura
+    ../../home/programs/nightshift
+    ../../home/programs/group/cybersecurity.nix
 
     # System (Desktop environment like stuff)
     ../../home/system/hyprland
-    ../../home/system/hyprlock
-    ../../home/system/hyprpanel
+    ../../home/system/caelestia-shell
     ../../home/system/hyprpaper
-    ../../home/system/zathura
     ../../home/system/mime
     ../../home/system/udiskie
-    ../../home/system/vicinae
-    ../../home/system/wofi
-    # ../../home/system/hypridle
 
     #./secrets # CHANGEME: You should probably remove this line, this is where I store my secrets
   ];
@@ -46,30 +41,23 @@
 
     packages = with pkgs; [
       # Apps
-      bitwarden-desktop # Password manager
       vlc # Video player
       blanket # White-noise app
       obsidian # Note taking app
-      planify # Todolists
       textpieces # Manipulate texts
-      curtail # Compress images
       resources # Ressource monitor
       gnome-clocks # Clocks app
       gnome-text-editor # Basic graphic text editor
-      mpv # Video player
-      brave # Web browser
-
-      # Privacy
-      session-desktop # Session app, private messages
-      protonvpn-gui
-      proton-pass
-      # protonmail-desktop # Now using the online brave app
-      proton-authenticator
-      ticktick # Privacy friendly todo app
+      mpv #Video Player
+      session-desktop
+      signal-desktop
+      stirling-pdf
+      calibre
 
       # Dev
-      #go
+      go
       bun
+      docker
       nodejs
       python3
       jq
@@ -77,22 +65,10 @@
       pnpm
       air
       duckdb
-      #caido
       jdk
       mysql80
       sqlite
       jetbrains.idea-community-bin
-      ghidra
-      docker
-      wireshark
-
-      # Utils
-      zip
-      unzip
-      optipng
-      jpegoptim
-      pfetch
-      btop
       direnv
 
       # Just cool
@@ -100,12 +76,14 @@
       cbonsai
       pipes
       cmatrix
+      fastfetch
 
       # Backup
       vscode
+      brave
     ];
 
-    # Import my profile picture, used by the hyprpanel dashboard
+    # Import my profile picture, used by the celestia dashboard
     file.".face.icon" = {source = ./profile_picture.png;};
 
     # Don't touch this
