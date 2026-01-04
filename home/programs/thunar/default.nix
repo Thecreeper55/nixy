@@ -71,7 +71,7 @@ in {
     solid_archive=false
     remove_files=false
   '';
-
+  home.file.".config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml".force = true;
   home.file.".config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml".text = ''
     <?xml version="1.1" encoding="UTF-8"?>
 
