@@ -8,7 +8,7 @@
     ./variables.nix
 
     # Programs
-    ../../home/programs/vivaldi
+    ../../home/programs/proton
     ../../home/programs/proton
     ../../home/programs/ghostty
     ../../home/programs/nvf
@@ -21,6 +21,7 @@
     ../../home/programs/thunar
     ../../home/programs/discord
     ../../home/programs/direnv
+    ../../home/programs/nixy
     ../../home/programs/zathura
     ../../home/programs/nightshift
     ../../home/programs/group/cybersecurity.nix
@@ -80,7 +81,7 @@
 
       # Backup
       vscode
-      brave
+      vivaldi
     ];
 
     # Import my profile picture, used by the celestia dashboard
