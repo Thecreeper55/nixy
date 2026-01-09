@@ -10,7 +10,7 @@
       rounding = 10;
       gaps-in = 8;
       gaps-out = 8 * 2;
-      active-opacity = 0.97;
+      active-opacity = 0.96;
       inactive-opacity = 0.94;
       blur = true;
       border-size = 2;
@@ -18,14 +18,6 @@
       fetch = "fastfetch"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
       textColorOnWallpaper =
         config.lib.stylix.colors.base01; # Color of the text displayed on the wallpaper (Lockscreen, display manager, ...)
-
-      bar = {
-        # Hyprpanel
-        position = "top"; # "top" | "bottom"
-        transparent = true;
-        transparentButtons = false;
-        floating = true;
-      };
     };
     description = "Theme configuration options";
   };

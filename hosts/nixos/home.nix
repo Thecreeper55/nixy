@@ -8,7 +8,7 @@
     ./variables.nix
 
     # Programs
-    ../../home/programs/proton
+    ../../home/programs/brave
     ../../home/programs/proton
     ../../home/programs/ghostty
     ../../home/programs/nvf
