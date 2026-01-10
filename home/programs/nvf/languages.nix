@@ -111,6 +111,12 @@
       tailwind.enable = true;
       sql.enable = true;
       java.enable = true;
+      json.enable = true;
+      python.enable = true;
+      rust = {
+        enable = true;
+        extensions.crates-nvim.enable = true;
+      };
     };
     formatter = {
       conform-nvim = {
