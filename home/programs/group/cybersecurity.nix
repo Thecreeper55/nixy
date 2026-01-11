@@ -9,7 +9,7 @@
     john
     hashcat
     inputs.eleakxir.packages.${stdenv.hostPlatform.system}.leak-utils
-    caido
+    #caido
     nuclei
   ];
 }
