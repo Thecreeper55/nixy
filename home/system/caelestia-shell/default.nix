@@ -18,7 +18,7 @@
     enable = true;
     systemd.enable = false;
     settings = {
-      services.weatherLocation = "Paris";
+      services.weatherLocation = "Valladolid";
       general = {
         apps = {
           terminal = ["ghostty"];
