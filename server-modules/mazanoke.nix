@@ -1,5 +1,6 @@
+# Mazanoke is a self-hosted image downgrader
 {pkgs, ...}: let
-  version = "1.1.5"; # Ajuste la version si nécessaire
+  version = "1.1.5";
   mazanoke-pkg = pkgs.stdenv.mkDerivation {
     inherit version;
     pname = "mazanoke";
@@ -10,7 +11,6 @@
       hash = "sha256-B/AF4diMNxN94BzpZP/C+K8kNj9q+4SDKWa/qd4LrVU=";
     };
 
-    # On utilise installPhase pour copier les fichiers vers $out
     installPhase = ''
       mkdir -p $out/share/mazanoke
       cp -r ./index.html ./favicon.ico ./manifest.json ./service-worker.js ./assets $out/share/mazanoke/
