@@ -10,7 +10,6 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
       gamescopeSession.enable = true;
-      enable32Bit = true;
 
       extraCompatPackages = with pkgs; [
         proton-ge-bin

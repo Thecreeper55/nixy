@@ -3,36 +3,34 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   imports = [inputs.sops-nix.homeManagerModules.sops];
 
   sops = {
-    age.keyFile = "/home/hadi/.config/sops/age/keys.txt";
+    age.keyFile = "/home/${config.var.username}/.config/sops/age/keys.txt";
+
     defaultSopsFile = ./secrets.yaml;
     secrets = {
-      sshconfig = {path = "/home/hadi/.ssh/config";};
-      github-key = {path = "/home/hadi/.ssh/github";};
-      gitlab-key = {path = "/home/hadi/.ssh/gitlab";};
-      jack-key = {path = "/home/hadi/.ssh/jack";};
-      signing-key = {path = "/home/hadi/.ssh/key";};
-      signing-pub-key = {path = "/home/hadi/.ssh/key.pub";};
-      pia = {path = "/home/hadi/.config/pia/pia.ovpn";};
+      signing-key = {path = "/home/${config.var.username}/.ssh/key";};
+      signing-pub-key = {path = "/home/${config.var.username}/.ssh/key.pub";};
     };
   };
 
   home.file.".config/nixos/.sops.yaml".text = ''
     keys:
-      - &primary age12yvtj49pfh3fqzqflscm0ek4yzrjhr6cqhn7x89gdxnlykq0xudq5c7334
+      - &primary age16y46rldasx8gcw2nmnxnwgv280h5xll3y6q74ejyp7k3vrtg94mqj30dva
     creation_rules:
-      - path_regex: hosts/laptop/secrets/secrets.yaml$
+      - path_regex: hosts/zifra/secrets/secrets.yaml$
         key_groups:
           - age:
             - *primary
-      - path_regex: hosts/server/secrets/secrets.yaml$
+      - path_regex: hosts/nixos/secrets/secrets.yaml$
         key_groups:
           - age:
             - *primary
+
   '';
 
   systemd.user.services.mbsync.Unit.After = ["sops-nix.service"];
