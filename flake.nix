@@ -33,6 +33,10 @@
     # Server
     eleakxir.url = "github:anotherhadi/eleakxir";
     nixarr.url = "github:rasmus-kirk/nixarr";
+    #Star_Citizen
+    nix-citizen = {
+      url = "github:LovingMelody/nix-citizen";
+    };
   };
 
   outputs = inputs @ {nixpkgs, ...}: {

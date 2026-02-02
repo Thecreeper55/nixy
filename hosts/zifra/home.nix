@@ -25,6 +25,7 @@
     ../../home/programs/zathura
     ../../home/programs/nightshift
     ../../home/programs/group/cybersecurity.nix
+    ../../home/programs/starCitizen
 
     # System (Desktop environment like stuff)
     ../../home/system/hyprland
