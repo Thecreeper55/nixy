@@ -25,7 +25,8 @@
     ../../home/programs/zathura
     ../../home/programs/nightshift
     ../../home/programs/group/cybersecurity.nix
-    ../../home/programs/starCitizen
+    ../../home/programs/games/starCitizen
+    #../../home/programs/wayscriber
 
     # System (Desktop environment like stuff)
     ../../home/system/hyprland
@@ -55,6 +56,14 @@
       signal-desktop
       stirling-pdf
       calibre
+      boxflat
+      xleak
+      godot
+      krita
+      freecad
+      bambu-studio
+      blender
+      osu-lazer
 
       # Dev
       go

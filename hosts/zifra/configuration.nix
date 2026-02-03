@@ -17,6 +17,7 @@
     ../../nixos/protonupqt.nix
     ../../nixos/steam.nix
     ../../nixos/docker.nix
+    ../../nixos/opentabletdrivers.nix
 
     # You should let those lines as is
     ./hardware-configuration.nix
