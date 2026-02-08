@@ -21,7 +21,10 @@
     };
   };
 
-  hardware.opengl.enable = true;
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+  };
 
   services.monado = {
     enable = true;
