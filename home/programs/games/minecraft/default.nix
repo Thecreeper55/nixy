@@ -4,7 +4,7 @@
   ...
 }: {
   home.packages = [
-    inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
+    inputs.prismlauncher.packages.${pkgs.stdenv.hostPlatform.system}.prismlauncher
   ];
 
   nix.settings = {
