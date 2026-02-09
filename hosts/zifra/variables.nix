@@ -25,7 +25,7 @@
 
     git = {
       username = "Shaver";
-      email = "Shaver@mail.com";
+      email = "52399455+Thecreeper55@users.noreply.github.com";
     };
 
     autoUpgrade = false;
