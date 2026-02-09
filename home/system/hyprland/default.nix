@@ -13,7 +13,7 @@
   rounding = config.theme.rounding;
   blur = config.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
-  background = "rgba(" + config.lib.stylix.colors.base00 + "77)";
+  background = "rgba(" + config.lib.stylix.colors.base00 + "EE)";
 in {
   imports = [
     ./animations.nix
@@ -80,6 +80,7 @@ in {
         "XDG_SESSION_DESKTOP,Hyprland"
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
         "QT_QPA_PLATFORM=wayland,xcb"
+        "QT_QPA_PLATFORMTHEME=gtk3"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
         "__GL_GSYNC_ALLOWED,0"

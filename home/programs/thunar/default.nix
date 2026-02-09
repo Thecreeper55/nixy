@@ -2,6 +2,7 @@
 {
   pkgs,
   config,
+  lib,
   ...
 }: let
   user = config.var.username;
@@ -16,29 +17,35 @@ in {
     thunar-media-tags-plugin
     p7zip
     xarchiver
+    papirus-icon-theme
+    material-icons
+    material-design-icons
+    material-symbols
   ];
 
   gtk = {
+    enable = true;
     iconTheme = {
-      name = "WhiteSur";
-      package = pkgs.whitesur-icon-theme.override {
-        boldPanelIcons = true;
-        alternativeIcons = true;
-      };
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
     };
+
+    # bookmarks for the side pane
+    gtk3.bookmarks = [
+      "file:///home/${user}/Downloads Downloads"
+      "file:///home/${user}/Pictures Pictures"
+      "file:///home/${user}/.config/nixos NixOS"
+      "file:///home/${user}/dev Development"
+    ];
   };
+
+  qt.enable = true;
 
   home.sessionVariables = {
-    XDG_ICON_DIR = "${pkgs.whitesur-icon-theme}/share/icons/WhiteSur";
+    XDG_ICON_DIR = "${pkgs.papirus-icon-theme}/share/icons/Papirus";
+    QS_ICON_THEME = "Papirus";
+    QT_STYLE_OVERRIDE = lib.mkForce "Fusion";
   };
-
-  # bookmarks for the side pane
-  gtk.gtk3.bookmarks = [
-    "file:///home/${user}/Downloads Downloads"
-    "file:///home/${user}/Pictures Pictures"
-    "file:///home/${user}/.config/nixos NixOS"
-    "file:///home/${user}/dev Development"
-  ];
 
   home.file.".config/xarchiver/xarchiverrc".text = ''
     [xarchiver]
@@ -56,7 +63,7 @@ in {
     show_toolbar=true
     preferred_custom_cmd=
     preferred_temp_dir=/tmp
-    preferred_extract_dir=/home/${user}/Downloads
+    preferred_extract_dir=./
     allow_sub_dir=0
     ensure_directory=true
     overwrite=false
@@ -127,8 +134,8 @@ in {
           <icon>utilities-terminal</icon>
           <name>Open Terminal Here</name>
           <unique-id>1700000000000001</unique-id>
-          <command>kitty -d %f</command>
-          <description>Opens Kitty terminal in the selected folder</description>
+          <command>ghostty -d %f</command>
+          <description>Opens terminal in the selected folder</description>
           <patterns>*</patterns>
           <startup-notify/>
           <directories/>
