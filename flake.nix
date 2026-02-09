@@ -40,6 +40,8 @@
       inputs.nix-gaming.follows = "nix-gaming";
     };
     wayscriber.url = "github:devmobasa/wayscriber";
+    #minecraft
+    prismlauncher.url = "github:PrismLauncher/PrismLauncher";
   };
 
   outputs = inputs @ {nixpkgs, ...}: {
@@ -77,20 +79,19 @@
           ];
         };
 
-      pph =
-        nixpkgs.lib.nixosSystem {
-          modules = [
-            {
-              nixpkgs.overlays = [];
-              _module.args = {
-                inherit inputs;
-              };
-            }
-            inputs.home-manager.nixosModules.home-manager
-            inputs.stylix.nixosModules.stylix
-            ./hosts/pph/configuration.nix 
-          ];
-        };
+      pph = nixpkgs.lib.nixosSystem {
+        modules = [
+          {
+            nixpkgs.overlays = [];
+            _module.args = {
+              inherit inputs;
+            };
+          }
+          inputs.home-manager.nixosModules.home-manager
+          inputs.stylix.nixosModules.stylix
+          ./hosts/pph/configuration.nix
+        ];
+      };
       # Jack is my server
       jack = nixpkgs.lib.nixosSystem {
         modules = [

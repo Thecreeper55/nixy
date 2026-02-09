@@ -26,6 +26,7 @@
     ../../home/programs/nightshift
     ../../home/programs/group/cybersecurity.nix
     ../../home/programs/games/starCitizen
+    ../../home/programs/games/minecraft
     #../../home/programs/wayscriber
 
     # System (Desktop environment like stuff)
