@@ -24,8 +24,8 @@
     extraLocale = "es_ES.UTF-8";
 
     git = {
-      username = "Thecreeper55";
-      email = "Thecreeper55@mail.com";
+      username = "Shaver";
+      email = "Shaver@mail.com";
     };
 
     autoUpgrade = false;
