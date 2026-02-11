@@ -19,6 +19,7 @@
     ../../nixos/docker.nix
     ../../nixos/opentabletdrivers.nix
     ../../nixos/star-citizen.nix
+    ../../nixos/noisetorch.nix
 
     # You should let those lines as is
     ./hardware-configuration.nix
