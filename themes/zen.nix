@@ -10,8 +10,8 @@
       rounding = 30;
       gaps-in = 12;
       gaps-out = 12 * 2;
-      active-opacity = 0.96;
-      inactive-opacity = 0.94;
+      active-opacity = 0.99;
+      inactive-opacity = 0.98;
       blur = false;
       border-size = 4;
       animation-speed = "medium"; # "fast" | "medium" | "slow"
@@ -75,8 +75,8 @@
 
     polarity = "dark";
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/rain-pixel.png";
-      sha256 = "sha256-f4ZWb4nKCNP1aanTJ5EI0nI7Vpvd+Mp79JFL708qPR4=";
+      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/refs/heads/main/app/static/wallpapers/nepal.png";
+      sha256 = "sha256-0o2+B3+yA++PCyfNC+VqmaX959aKk3GuD7XpOq3SGcM=";
     };
   };
 }

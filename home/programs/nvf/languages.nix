@@ -87,6 +87,13 @@
       enableFormat = true;
       enableTreesitter = true;
 
+      python = {
+        enable = true;
+        lsp = {
+          enable = true;
+          servers = ["pyright"];
+        };
+      };
       astro.enable = true;
       go.enable = true;
       markdown = {
@@ -112,7 +119,6 @@
       sql.enable = true;
       java.enable = true;
       json.enable = true;
-      python.enable = true;
       rust = {
         enable = true;
         extensions.crates-nvim.enable = true;
