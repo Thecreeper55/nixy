@@ -121,6 +121,7 @@
       json.enable = true;
       rust = {
         enable = true;
+        lsp.enable = true;
         extensions.crates-nvim.enable = true;
       };
     };
