@@ -65,6 +65,7 @@
       bambu-studio
       blender
       osu-lazer
+      thorium-reader
 
       # Dev
       go
