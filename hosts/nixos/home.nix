@@ -10,6 +10,7 @@
     # Programs
     ../../home/programs/brave
     ../../home/programs/proton
+    ../../home/programs/proton/auto-start-vpn.nix
     ../../home/programs/ghostty
     ../../home/programs/nvf
     ../../home/programs/shell
@@ -54,6 +55,9 @@
       signal-desktop
       stirling-pdf
       calibre
+      krita
+      godot
+      android-studio
 
       # Dev
       go
@@ -70,7 +74,7 @@
       rustup
       mysql80
       sqlite
-      jetbrains.idea-community-bin
+      jetbrains.idea
       direnv
 
       # Just cool
