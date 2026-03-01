@@ -66,6 +66,7 @@
       blender
       osu-lazer
       thorium-reader
+      lutris
 
       # Dev
       go
