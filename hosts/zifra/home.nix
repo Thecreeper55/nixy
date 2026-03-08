@@ -67,6 +67,7 @@
       osu-lazer
       thorium-reader
       lutris
+      vintagestory
 
       # Dev
       go
