@@ -86,6 +86,7 @@
       sqlite
       jetbrains.idea
       direnv
+      android-studio
 
       # Just cool
       peaclock
