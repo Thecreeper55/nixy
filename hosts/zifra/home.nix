@@ -57,7 +57,6 @@
       signal-desktop
       stirling-pdf
       calibre
-      boxflat
       xleak
       godot
       krita
@@ -87,6 +86,7 @@
       jetbrains.idea
       direnv
       android-studio
+      usbutils
 
       # Just cool
       peaclock

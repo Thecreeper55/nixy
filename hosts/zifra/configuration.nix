@@ -20,6 +20,7 @@
     ../../nixos/opentabletdrivers.nix
     ../../nixos/star-citizen.nix
     ../../nixos/noisetorch.nix
+    ../../nixos/boxflat.nix
 
     # You should let those lines as is
     ./hardware-configuration.nix
