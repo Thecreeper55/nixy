@@ -28,6 +28,7 @@
     ../../home/programs/games/starCitizen
     ../../home/programs/games/minecraft
     #../../home/programs/wayscriber
+    ../../home/programs/games/osu
 
     # System (Desktop environment like stuff)
     ../../home/system/hyprland
@@ -63,7 +64,7 @@
       freecad
       bambu-studio
       blender
-      osu-lazer
+      #osu-lazer
       thorium-reader
       lutris
       vintagestory
