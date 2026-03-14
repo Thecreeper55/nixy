@@ -1,2 +1,2 @@
 # Import all fetch scripts
-{imports = [./neofetch ./nerdfetch ./fastfetch];}
+{imports = [./nerdfetch ./fastfetch];}
