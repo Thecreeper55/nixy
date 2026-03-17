@@ -81,7 +81,7 @@
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
             inputs.nix-index-database.nixosModules.default
-            ./hosts/laptop/configuration.nix # CHANGEME: change the path to match your host folder
+            ./hosts/nixos/configuration.nix # CHANGEME: change the path to match your host folder
           ];
         };
 
