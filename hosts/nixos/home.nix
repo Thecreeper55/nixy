@@ -46,6 +46,7 @@
       vlc # Video player
       blanket # White-noise app
       obsidian # Note taking app
+      trilium-desktop
       textpieces # Manipulate texts
       resources # Ressource monitor
       gnome-clocks # Clocks app
