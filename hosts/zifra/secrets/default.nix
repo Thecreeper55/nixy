@@ -20,7 +20,7 @@
 
   home.file.".config/nixos/.sops.yaml".text = ''
     keys:
-      - &primary age16y46rldasx8gcw2nmnxnwgv280h5xll3y6q74ejyp7k3vrtg94mqj30dva
+      - &primary age12yvtj49pfh3fqzqflscm0ek4yzrjhr6cqhn7x89gdxnlykq0xudq5c7334
     creation_rules:
       - path_regex: hosts/zifra/secrets/secrets.yaml$
         key_groups:

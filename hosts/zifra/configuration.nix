@@ -7,7 +7,7 @@
     ../../nixos/fonts.nix
     ../../nixos/home-manager.nix
     ../../nixos/nix.nix
-    ../../nixos/grub.nix # or ../../nixos/systemd-boot.nix
+    ../../nixos/systemd-boot.nix
     ../../nixos/sddm.nix
     ../../nixos/users.nix
     ../../nixos/utils.nix
