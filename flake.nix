@@ -36,7 +36,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Server
-    eleakxir.url = "github:anotherhadi/eleakxir";
+    #eleakxir.url = "github:anotherhadi/eleakxir";
     nixarr.url = "github:rasmus-kirk/nixarr";
     #Star_Citizen
     nix-gaming.url = "github:fufexan/nix-gaming";
