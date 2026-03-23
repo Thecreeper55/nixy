@@ -29,6 +29,8 @@
 
   home-manager.users."${config.var.username}" = import ./home.nix;
 
+  nix.settings.trusted-users = ["${config.var.username}"];
+
   # Don't touch this
   system.stateVersion = "24.05";
 }
