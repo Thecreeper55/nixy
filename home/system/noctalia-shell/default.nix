@@ -8,6 +8,10 @@
     inputs.noctalia.homeModules.default
   ];
 
+  wayland.windowManager.hyprland.settings.exec-once = [
+    "noctalia-shell"
+  ];
+
   # configure options
   programs.noctalia-shell = {
     enable = true;
@@ -126,6 +130,16 @@
         enabled = true;
         displayMode = "auto_hide";
         dockType = "floating";
+      };
+      notifications = {
+        enabled = true;
+      };
+      enableBatteryTast = true;
+      #notificaciones(spotify)
+      enableMediaTast = false;
+      appLauncher = {
+        enableClipboardHistory = true;
+        terminalCommand = "ghostty";
       };
     };
     # this may also be a string or a path to a JSON file.
