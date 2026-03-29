@@ -106,6 +106,8 @@
               tooltipFormat = "HH:mm ddd,MMM dd";
               useMonospaceFont = true;
               usePrimaryColor = true;
+              useCustomFont = true;
+              customFont = config.stylix.fonts.monospace.name;
             }
             {
               id = "Spacer";
@@ -143,5 +145,20 @@
       };
     };
     # this may also be a string or a path to a JSON file.
+    plugins = {
+      sources = [
+        {
+          enabled = true;
+          name = "Official Noctalia Plugins";
+          url = "https://github.com/noctalia-dev/noctalia-plugins";
+        }
+      ];
+      states = {
+        translator = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+      };
+    };
   };
 }
