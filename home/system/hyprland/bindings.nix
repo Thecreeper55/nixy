@@ -179,9 +179,9 @@ in {
         "$shiftMod,L, focusmonitor, 1" # Focus next monitor
 
         # Utilities
-        "$shiftMod, S, global, caelestia:screenshotFreeze" # Capture region (freeze)
-        ", Print, global, caelestia:screenshotFreeze" # Capture region (freeze)
-        "$shiftMod+Alt, S, global, caelestia:screenshot" # Capture region
+        "$shiftMod, S, exec, ${nCall} plugin:screenshot takeScreenshot output" # Capture region (freeze)
+        ", Print, exec, ${nCall} plugin:screenshot takeScreenshot region" # Capture region (freeze)
+        "$shiftMod+Alt, S, exec, ${nCall} plugin:screenshot takeScreenshot region" # Capture region
       ]
       ++ (builtins.concatLists (builtins.genList (i: let
           ws = i + 1;
