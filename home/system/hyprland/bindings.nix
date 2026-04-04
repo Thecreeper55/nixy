@@ -6,6 +6,9 @@
 }: let
   colors = config.lib.stylix.colors;
 
+  # Helper para no repetir el comando base
+  nCall = "noctalia-shell ipc call";
+
   mkMenu = menu: let
     configFile =
       pkgs.writeText "config.yaml"
@@ -17,7 +20,6 @@
         margin_right = 15;
         margin_bottom = 15;
         rows_per_column = 5;
-
         inherit menu;
       });
   in
@@ -118,13 +120,13 @@ in {
           ]))
 
         # Power
-        "$mod, X, global, caelestia:session" # Powermenu
+        "$mod, X, exec, ${nCall} sessionMenu toggle" # Powermenu
         ("$shiftMod, X, exec, "
           + lib.getExe (mkMenu [
             {
               key = "l";
               desc = "Lock";
-              cmd = "hyprctl dispatch global caelestia:lock";
+              cmd = "hyprctl dispatch  exec '${nCall} lockScreen lock'";
             }
             {
               key = "s";
@@ -149,17 +151,17 @@ in {
             {
               key = "c";
               desc = "Restart caelestia";
-              cmd = "hyprctl dispatch exec 'caelestia-shell kill | sleep 1 | caelestia-shell'";
+              cmd = "hyprctl dispatch exec 'noctalia-shell kill | sleep 1 | noctalia-shell'";
             }
           ]))
 
         # Quick launch
         "$mod,RETURN, exec, uwsm app -- ${pkgs.ghostty}/bin/ghostty" # Ghostty (terminal)
         "$mod,E, exec,  uwsm app -- ${pkgs.thunar}/bin/thunar" # Thunar
-        "$shiftMod, E, exec, pkill fuzzel || caelestia emoji -p" # Emoji picker
-        "$mod, SPACE, global, caelestia:launcher" # Launcher
-        "$mod, N, exec, caelestia shell drawers toggle sidebar" # Sidebar (Notifications, quick actions)
-        "$mod, D, exec, caelestia shell drawers toggle dashboard" # Dashboard
+        "$shiftMod, E, exec, pkill fuzzel || ${nCall} launcher emoji" # Emoji picker
+        "$mod, SPACE, exec, ${nCall} launcher toggle" # Launcher
+        "$mod, N, exec, ${nCall} notifications toggleHistory" # Sidebar (Notifications, quick actions)
+        "$mod, D, exec, ${nCall} controlCenter toggle" # Dashboard
 
         # Windows
         "$mod,Q, killactive," # Close window
@@ -177,10 +179,9 @@ in {
         "$shiftMod,L, focusmonitor, 1" # Focus next monitor
 
         # Utilities
-        "$shiftMod, SPACE, exec, caelestia shell gameMode toggle" # Toggle Focus/Game mode
-        "$shiftMod, S, global, caelestia:screenshotFreeze" # Capture region (freeze)
-        ", Print, global, caelestia:screenshotFreeze" # Capture region (freeze)
-        "$shiftMod+Alt, S, global, caelestia:screenshot" # Capture region
+        "$shiftMod, S, exec, ${nCall} plugin:screenshot takeScreenshot output" # Capture region (freeze)
+        ", Print, exec, ${nCall} plugin:screenshot takeScreenshot region" # Capture region (freeze)
+        "$shiftMod+Alt, S, exec, ${nCall} plugin:screenshot takeScreenshot region" # Capture region
       ]
       ++ (builtins.concatLists (builtins.genList (i: let
           ws = i + 1;
@@ -197,15 +198,15 @@ in {
 
     bindl = [
       # Brightness
-      ", XF86MonBrightnessUp, global, caelestia:brightnessUp"
-      ", XF86MonBrightnessDown, global, caelestia:brightnessDown"
+      ", XF86MonBrightnessUp, exec, ${nCall} brightness up"
+      ", XF86MonBrightnessDown, exec, ${nCall} brightness down"
 
       # Media
-      ", XF86AudioPlay, global, caelestia:mediaToggle"
-      ", XF86AudioPause, global, caelestia:mediaToggle"
-      ", XF86AudioNext, global, caelestia:mediaNext"
-      ", XF86AudioPrev, global, caelestia:mediaPrev"
-      ", XF86AudioStop, global, caelestia:mediaStop"
+      ", XF86AudioPlay, exec, ${nCall} media playPause"
+      ", XF86AudioPause, exec, ${nCall} media playPause"
+      ", XF86AudioNext, exec, ${nCall} media next"
+      ", XF86AudioPrev, exec, ${nCall} media previous"
+      ", XF86AudioStop, exec, ${nCall} media pause"
 
       # Sound
       ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
@@ -215,14 +216,14 @@ in {
 
     bindin = [
       # Launcher
-      "$mod, mouse:272, global, caelestia:launcherInterrupt"
-      "$mod, mouse:273, global, caelestia:launcherInterrupt"
-      "$mod, mouse:274, global, caelestia:launcherInterrupt"
-      "$mod, mouse:275, global, caelestia:launcherInterrupt"
-      "$mod, mouse:276, global, caelestia:launcherInterrupt"
-      "$mod, mouse:277, global, caelestia:launcherInterrupt"
-      "$mod, mouse_up, global, caelestia:launcherInterrupt"
-      "$mod, mouse_down, global, caelestia:launcherInterrupt"
+      "$mod, mouse:272, exec, ${nCall} launcher close"
+      "$mod, mouse:273, exec, ${nCall} launcher close"
+      "$mod, mouse:274, exec, ${nCall} launcher close"
+      "$mod, mouse:275, exec, ${nCall} launcher close"
+      "$mod, mouse:276, exec, ${nCall} launcher close"
+      "$mod, mouse:277, exec, ${nCall} launcher close"
+      "$mod, mouse_up, exec, ${nCall} launcher close"
+      "$mod, mouse_down, exec, ${nCall} launcher close"
     ];
   };
 }
