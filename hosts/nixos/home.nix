@@ -73,7 +73,6 @@
       duckdb
       jdk
       rustup
-      mysql80
       sqlite
       jetbrains.idea
       direnv

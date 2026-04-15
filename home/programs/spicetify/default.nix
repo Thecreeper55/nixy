@@ -16,7 +16,7 @@ in {
 
   programs.spicetify = {
     enable = true;
-    #theme = lib.mkForce spicePkgs.themes.comfy;
+    theme = lib.mkForce spicePkgs.themes.comfy;
 
     colorScheme = "custom";
 
@@ -31,7 +31,7 @@ in {
 
     enabledExtensions = with spicePkgs.extensions; [
       playlistIcons
-      lastfm
+      #lastfm
       historyShortcut
       hidePodcasts
       adblock
