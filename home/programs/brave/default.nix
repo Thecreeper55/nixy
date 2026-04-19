@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.brave = {
     enable = true;
     commandLineArgs = [
@@ -35,9 +35,16 @@
     ];
     extensions = let
       ids = [
+        "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock
+        "mmjbdbjnoablegbkcklggeknkfcjkjia" # custom new tab
+        "ghmbeldphafepmbegfdlkpapadhbakde" # proton pass
       ];
     in
       map (id: {inherit id;}) ids;
+  };
+  home.sessionVariables = {
+    DEFAULT_BROWSER = "${pkgs.brave}/bin/brave";
+    BROWSER = "${pkgs.brave}/bin/brave";
   };
 
   xdg.configFile."BraveSoftware/Brave-Browser/Policies/managed/policy.json".text = builtins.toJSON {

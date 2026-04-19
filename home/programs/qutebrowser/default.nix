@@ -7,11 +7,6 @@
     ./userscripts.nix
   ];
 
-  home.sessionVariables = {
-    DEFAULT_BROWSER = "qutebrowser";
-    BROWSER = "qutebrowser";
-  };
-
   xdg.mimeApps.defaultApplications = {
     "text/html" = ["org.qutebrowser.qutebrowser.desktop"];
     "text/xml" = ["org.qutebrowser.qutebrowser.desktop"];
