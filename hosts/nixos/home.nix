@@ -52,6 +52,7 @@
       krita
       godot
       android-studio
+      trilium-desktop
 
       # Dev
       jdk
