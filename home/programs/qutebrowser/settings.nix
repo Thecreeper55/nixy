@@ -29,8 +29,8 @@
       "editor.command" = ["ghostty" "-e" "nvim" "{}"];
 
       # Tabs
-      "tabs.show" = "switching";
-      "tabs.show_switching_delay" = 3000;
+      # "tabs.show" = "switching";
+      # "tabs.show_switching_delay" = 3000;
 
       # Scrollbar
       "scrolling.bar" = "never";
@@ -46,6 +46,7 @@
     extraConfig = ''
       c.statusbar.padding = {'top': 6, 'bottom': 6, 'left': 8, 'right': 8}
       c.tabs.padding = {'top': 6, 'bottom': 6, 'left': 8, 'right': 8}
+      config.set('content.local_content_can_access_remote_urls', True, 'file://*')
     '';
   };
 }

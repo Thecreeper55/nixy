@@ -47,6 +47,11 @@
     };
     lsp = {
       enable = true;
+      presets = {
+        tailwindcss-language-server = {
+          enable = true;
+        };
+      };
       trouble.enable = true;
       lspSignature.enable = true;
       lspconfig.enable = true;
@@ -106,7 +111,7 @@
         };
         extraDiagnostics.enable = true;
       };
-      ts = {
+      typescript = {
         enable = true;
         extensions.ts-error-translator.enable = true;
       };
@@ -115,7 +120,6 @@
       html.enable = true;
       bash.enable = true;
       nix.enable = true;
-      tailwind.enable = true;
       sql.enable = true;
       java.enable = true;
       json.enable = true;
