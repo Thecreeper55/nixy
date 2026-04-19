@@ -23,9 +23,12 @@
     ../../home/programs/discord
     ../../home/programs/direnv
     ../../home/programs/nixy
-    ../../home/programs/zathura
     ../../home/programs/nightshift
+
+    ../../home/programs/group/basic-apps.nix
     ../../home/programs/group/cybersecurity.nix
+    ../../home/programs/group/dev.nix
+    ../../home/programs/group/misc.nix
 
     # System (Desktop environment like stuff)
     ../../home/system/hyprland
@@ -43,17 +46,7 @@
 
     packages = with pkgs; [
       # Apps
-      vlc # Video player
-      blanket # White-noise app
-      obsidian # Note taking app
-      trilium-desktop
-      textpieces # Manipulate texts
-      resources # Ressource monitor
-      gnome-clocks # Clocks app
-      gnome-text-editor # Basic graphic text editor
       mpv #Video Player
-      session-desktop
-      signal-desktop
       stirling-pdf
       calibre
       krita
@@ -61,31 +54,13 @@
       android-studio
 
       # Dev
-      go
-      bun
-      docker
-      nodejs
-      python3
-      jq
-      just
-      pnpm
-      air
-      duckdb
       jdk
       rustup
       sqlite
       jetbrains.idea
       direnv
 
-      # Just cool
-      peaclock
-      cbonsai
-      pipes
-      cmatrix
-      fastfetch
-
       # Backup
-      vscode
       vivaldi
     ];
 

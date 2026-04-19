@@ -68,13 +68,13 @@ in {
             }
             {
               key = "b";
-              desc = "Qutebrowser";
-              cmd = "${pkgs.qutebrowser}/bin/qutebrowser";
+              desc = "Brave";
+              cmd = "${pkgs.brave}/bin/brave";
             }
             {
               key = "i";
-              desc = "Qutebrowser (Temp session)";
-              cmd = "${pkgs.qutebrowser}/bin/qutebrowser --temp-basedir";
+              desc = "Brave (Private Window)";
+              cmd = "${pkgs.brave}/bin/brave --incognito";
             }
           ]))
 
