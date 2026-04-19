@@ -5,11 +5,11 @@
 }: {
   imports = [
     # Choose your theme here:
-    ../../themes/zen.nix
+    ../../themes/darkviolet.nix
   ];
 
   config.var = {
-    hostname = "nixy";
+    hostname = "h-laptop";
     username = "hadi";
     configDirectory =
       "/home/"

@@ -1,6 +1,7 @@
 # Spicetify is a spotify client customizer
 {
   pkgs,
+  pkgs-stable,
   config,
   lib,
   inputs,
@@ -16,6 +17,7 @@ in {
 
   programs.spicetify = {
     enable = true;
+    spotifyPackage = pkgs-stable.spotify;
     theme = lib.mkForce spicePkgs.themes.comfy;
 
     colorScheme = "custom";
@@ -31,7 +33,6 @@ in {
 
     enabledExtensions = with spicePkgs.extensions; [
       playlistIcons
-      #lastfm
       historyShortcut
       hidePodcasts
       adblock

@@ -1,16 +1,25 @@
 {
-  pkgs,
+  pkgs-stable,
   inputs,
   ...
 }: {
-  home.packages = with pkgs; [
-    firefox
+  home.packages = with pkgs-stable; [
     wireshark
     nmap
     john
     hashcat
-    #inputs.eleakxir.packages.${stdenv.hostPlatform.system}.leak-utils
-    #caido
+
+    # Web
+    caido
     nuclei
+    gobuster
+    dirb
+
+    # Utils
+    inetutils
+    samba
+    openvpn
+    mariadb
+    redis
   ];
 }

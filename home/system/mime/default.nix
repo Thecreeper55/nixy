@@ -7,7 +7,6 @@
 with lib; let
   defaultApps = {
     # check desktop files here: `ls $(echo $XDG_DATA_DIRS| sed "s/:/ /g")`
-    browser = ["brave.desktop"];
     text = [
       # "org.gnome.TextEditor.desktop"
       "nvim-ghostty.desktop"
@@ -20,7 +19,6 @@ with lib; let
     office = ["libreoffice.desktop"];
     pdf = ["zathura.desktop"];
     terminal = ["ghostty.desktop"];
-    discord = ["discord.desktop"];
     archive = ["xarchiver.desktop"];
   };
 
@@ -92,13 +90,6 @@ with lib; let
       "video/x-msvideo"
     ];
     directory = ["inode/directory"];
-    browser = [
-      "text/html"
-      "x-scheme-handler/about"
-      "x-scheme-handler/http"
-      "x-scheme-handler/https"
-      "x-scheme-handler/unknown"
-    ];
     office = [
       "application/vnd.oasis.opendocument.text"
       "application/vnd.oasis.opendocument.spreadsheet"
@@ -119,7 +110,6 @@ with lib; let
       "application/7z"
       "application/*tar"
     ];
-    discord = ["x-scheme-handler/discord"];
   };
 
   nvim-ghostty = pkgs.makeDesktopItem {

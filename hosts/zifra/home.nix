@@ -9,6 +9,7 @@
 
     # Programs
     ../../home/programs/brave
+    ../../home/programs/qutebrowser
     ../../home/programs/proton
     ../../home/programs/ghostty
     ../../home/programs/nvf
@@ -22,10 +23,12 @@
     ../../home/programs/discord
     ../../home/programs/direnv
     ../../home/programs/nixy
-    ../../home/programs/zathura
-    ../../home/programs/nightshift
+    ../../home/programs/git
+
+    ../../home/programs/group/basic-apps.nix
     ../../home/programs/group/cybersecurity.nix
-    ../../home/programs/nix-utils
+    ../../home/programs/group/dev.nix
+    ../../home/programs/group/misc.nix
 
     ../../home/programs/games/starCitizen
     ../../home/programs/games/minecraft
@@ -49,16 +52,7 @@
 
     packages = with pkgs; [
       # Apps
-      vlc # Video player
-      blanket # White-noise app
-      obsidian # Note taking app
-      textpieces # Manipulate texts
-      resources # Ressource monitor
-      gnome-clocks # Clocks app
-      gnome-text-editor # Basic graphic text editor
       mpv #Video Player
-      session-desktop
-      signal-desktop
       stirling-pdf
       calibre
       xleak
@@ -67,22 +61,11 @@
       freecad
       bambu-studio
       blender
-      #osu-lazer
       thorium-reader
       lutris
       vintagestory
 
       # Dev
-      go
-      bun
-      docker
-      nodejs
-      python3
-      jq
-      just
-      pnpm
-      air
-      duckdb
       jdk
       rustup
       sqlite
@@ -90,16 +73,6 @@
       direnv
       android-studio
       usbutils
-
-      # Just cool
-      peaclock
-      cbonsai
-      pipes
-      cmatrix
-      fastfetch
-
-      # Backup
-      vscode
     ];
 
     # Import my profile picture, used by the celestia dashboard

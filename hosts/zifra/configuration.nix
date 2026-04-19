@@ -13,6 +13,7 @@
     ../../nixos/utils.nix
     ../../nixos/tailscale.nix
     ../../nixos/hyprland.nix
+
     ../../nixos/wireshark.nix
     ../../nixos/protonupqt.nix
     ../../nixos/steam.nix

@@ -6,7 +6,6 @@
     ../../nixos/systemd-boot.nix
     ../../nixos/users.nix
     ../../nixos/utils.nix
-    ../../nixos/docker.nix
     ../../nixos/amd-graphics.nix
 
     # NixOS server modules
@@ -16,16 +15,18 @@
     ../../server-modules/glance
     ../../server-modules/adguardhome.nix
     ../../server-modules/arr.nix
-    ../../server-modules/eleakxir.nix
+    ../../server-modules/blog.nix
+    ../../server-modules/awesome-wallpapers.nix
+    ../../server-modules/iknowyou.nix
     ../../server-modules/stirling-pdf.nix
     ../../server-modules/cyberchef.nix
-    ../../server-modules/linkding.nix
     ../../server-modules/mazanoke.nix
-    ../../server-modules/nginx.nix
+    ../../server-modules/kernel-hardening.nix
     ../../server-modules/fail2ban.nix
-    ../../server-modules/freshrss.nix
     ../../server-modules/default-creds.nix
     ../../server-modules/umami.nix
+    ../../server-modules/gitea.nix
+    ../../server-modules/mealie.nix
 
     # You should let those lines as is
     ./hardware-configuration.nix
