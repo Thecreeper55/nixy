@@ -55,6 +55,7 @@
     wayscriber.url = "github:devmobasa/wayscriber";
     #minecraft
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
+    hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
     # Server
     # FIXME: Deleted repo for now
     # eleakxir.url = "github:anotherhadi/eleakxir";

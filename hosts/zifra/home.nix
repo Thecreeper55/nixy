@@ -9,7 +9,6 @@
 
     # Programs
     ../../home/programs/brave
-    ../../home/programs/qutebrowser
     ../../home/programs/proton
     ../../home/programs/ghostty
     ../../home/programs/nvf
@@ -34,6 +33,7 @@
     ../../home/programs/games/minecraft
     #../../home/programs/wayscriber
     ../../home/programs/games/osu
+    ../../home/programs/games/hytale
 
     # System (Desktop environment like stuff)
     ../../home/system/hyprland
