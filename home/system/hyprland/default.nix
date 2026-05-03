@@ -13,6 +13,7 @@
   rounding = config.theme.rounding;
   blur = config.theme.blur;
   keyboardLayout = config.var.keyboardLayout;
+  keyboardVariant = config.var.keyboardVariant or "";
   background = "rgba(" + config.lib.stylix.colors.base00 + "EE)";
 in {
   imports = [
@@ -94,7 +95,7 @@ in {
         gaps_in = gaps-in;
         gaps_out = gaps-out;
         border_size = border-size;
-        layout = "master";
+        layout = "scrolling";
         "col.inactive_border" = lib.mkForce background;
       };
 
@@ -122,6 +123,13 @@ in {
         mfact = 0.5;
       };
 
+      scrolling = {
+        column_width = 0.5;
+        direction = "right";
+        focus_fit_method = 1;
+        follow_focus = true;
+      };
+
       gesture = "3, horizontal, workspace";
 
       windowrule = [
@@ -147,6 +155,7 @@ in {
 
       input = {
         kb_layout = keyboardLayout;
+        kb_variant = keyboardVariant;
 
         kb_options = "caps:escape";
         follow_mouse = 1;

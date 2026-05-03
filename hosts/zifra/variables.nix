@@ -17,6 +17,7 @@
       + "/.config/nixos"; # The path of the nixos configuration directory
 
     keyboardLayout = "us";
+    keyboardVariant = "intl";
 
     location = "Valladolid";
     timeZone = "Europe/Madrid";
