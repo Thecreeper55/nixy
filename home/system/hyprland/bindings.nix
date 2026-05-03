@@ -185,7 +185,7 @@ in {
         "$mod,L, movefocus, r" # Move focus Right
         "$shiftMod,H, focusmonitor, -1" # Focus previous monitor
         "$shiftMod,J, layoutmsg, removemaster" # Remove from master
-        "$shiftMod,K, layoutmsg, addmaster" # Add to master
+        "$shiftMod,K, layoutmsg, promote" # Creates new Column
         "$shiftMod,L, focusmonitor, 1" # Focus next monitor
 
         # Utilities

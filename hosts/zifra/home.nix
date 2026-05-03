@@ -62,7 +62,6 @@
       bambu-studio
       blender
       thorium-reader
-      lutris
       vintagestory
 
       # Dev
