@@ -65,6 +65,7 @@
       vintagestory
       davinci-resolve
       obs-studio
+      yazi # file explorer
 
       # Dev
       jdk

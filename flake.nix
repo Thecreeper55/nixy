@@ -45,6 +45,7 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    affinity-nix.url = "github:mrshmllow/affinity-nix";
     #Star_Citizen
     nix-gaming.url = "github:fufexan/nix-gaming";
     nix-citizen = {
