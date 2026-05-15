@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  hardware.xpadneo.enable = true;
   programs = {
     gamescope = {
       enable = true;

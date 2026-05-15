@@ -63,6 +63,8 @@
       blender
       thorium-reader
       vintagestory
+      davinci-resolve
+      obs-studio
 
       # Dev
       jdk
