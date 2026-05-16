@@ -29,7 +29,7 @@
     ../../home/programs/group/dev.nix
     ../../home/programs/group/misc.nix
 
-    ../../home/programs/games/starCitizen
+    #../../home/programs/games/starCitizen
     ../../home/programs/games/minecraft
     #../../home/programs/wayscriber
     ../../home/programs/games/osu
@@ -63,8 +63,8 @@
       blender
       thorium-reader
       vintagestory
-      davinci-resolve
-      obs-studio
+      audacity
+      lmms
       yazi # file explorer
 
       # Dev
